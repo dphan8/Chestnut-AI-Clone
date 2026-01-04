@@ -12,22 +12,23 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        {/* We keep the calculator because it adds value even if not in the screenshot */}
+        <SavingsCalculator /> 
         <HowItWorks />
-        <SavingsCalculator />
         
         {/* CTA Section */}
-        <section className="py-24 bg-muted/50">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="text-4xl font-serif font-bold text-primary mb-6">Ready to secure your future?</h2>
-            <p className="text-muted-foreground text-lg mb-10">
-              Join thousands of homeowners who saved time and money with Chestnut. No obligation, just better rates.
+        <section className="py-32 bg-primary relative overflow-hidden">
+          {/* Abstract shapes */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+          
+          <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Ready to save thousands?</h2>
+            <p className="text-primary-foreground/80 text-xl mb-10 text-balance">
+              Join thousands of homeowners who saved time and money with Chestnut AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="h-14 px-8 text-lg bg-primary text-white font-medium rounded-full shadow-xl hover:bg-primary/90 transition-all">
+              <button className="h-16 px-10 text-lg bg-white text-primary font-bold rounded-full shadow-2xl hover:bg-white/90 transition-all hover:-translate-y-1">
                 Get Pre-Approved
-              </button>
-              <button className="h-14 px-8 text-lg bg-white border border-input text-primary font-medium rounded-full hover:bg-gray-50 transition-all">
-                Talk to an Expert
               </button>
             </div>
           </div>

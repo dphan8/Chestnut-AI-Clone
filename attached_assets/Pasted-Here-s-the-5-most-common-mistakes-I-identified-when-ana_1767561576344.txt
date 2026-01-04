@@ -1,0 +1,70 @@
+Here's the 5 most common mistakes I identified when analysing these landing pages (and how to fix them):
+
+#1 Not Starting with a Clear and Compelling Headline 🚀
+
+Your headline is the first thing visitors see—it needs to grab attention and convey your value proposition instantly. You have 3 seconds to capture your visitors attention before they click away. So please, please steer clear of buzzwordy, ambiguous headlines - nobody is sticking around to decipher your 'clever' headline.
+
+Here's an example of a bad headline
+
+Supercharge your job search with AI
+
+It doesn't really tell me anything. For all I know, it could be selling a Roomba with resumes stacked on top of it. Something better could be
+
+Land Your Dream Job Faster with AI-Powered Resume Feedback
+
+In this example, the buzzword is dropped and it tells the visitor exactly what they're looking at. It also includes a benefit.
+
+#2 Not Highlighting Benefits Over Features 💡
+
+Don't make the mistake of just listing out all of your features/services. Try and tie in benefits where possible. While features are important, benefits are what sell. People want to know how your product or service will improve their lives. This works even better if you can identify their pain first, and offer the benefit as a painkiller/solution.
+
+Here's a some typical feature focused text:
+
+"Real-time analytics dashboard."
+
+This comes across as dry, and doesn't really sell.
+
+Here's how you can drive it home by identifying the pain, and offering them a benefit/solution
+
+"Stop customer churn before it happens with real-time analytics."
+
+By emphasizing benefits, you tap into the visitor's emotions and needs.
+
+#3 Failing To Incorporate Social Proof and Trust Signals 🤝
+
+Visitors are wary of unfamiliar brands. But you can build trust by showcasing testimonials, reviews, or any form of social proof. Here's 3 kinds of social proof you can implement:
+
+Testimonials: Share quotes from satisfied customers.
+
+Trust Badges: Display security certifications or partnership logos.
+
+Case Studies: Highlight real-world success stories.
+
+These elements reassure visitors that others have benefited from your offering and helps them feel more confident in purchasing.
+
+#4 Not Address Objections or Explaining How It Works 🛠️
+
+Anticipate questions or doubts your visitors might have and address them upfront. Here's some easy ways you can do that
+
+FAQs: Include a section that answers common questions. If lots of people are asking a question, remember to add it to the list!
+
+Process Explanation: Briefly outline how your product or service works. A visual aid can be nice for this.
+
+Guarantees: Offer money-back guarantees or trial periods, if it's feasible.
+
+By handling objections, you reduce friction in the decision-making process. This is especially important if your social proof is not there yet because you're lacking testimonials.
+
+#5 Using Low-Quality Images 📷
+
+Images are obviously hugely important to building a landing page - but don't just use any images.
+
+If using AI generated images in your landing page, and it's obviously straight from MidJourney or DALL-E, it will give visitors the feeling that your website is inauthentic or low quality. Avoid Corporate Memphis. Please nothing that looks like it's from clipart.
+
+Keep it relevant and on brand with custom illustrations which match your brand, or real team and product photos. If selling a SaaS, use real screenshots of your product. Stock photos can (when selected carefully) look good. But use them sparingly, remember you want to help your visitor gain trust - overusing stock/AI images can have the opposite impact.
+
+Summary
+
+Okay, so hopefully that's helpful! To wrap up, your landing page needs to immediately tell your visitor what you're selling and how it benefits them, and it needs to assure visitors that you're good on your promises.
+
+If you don't have this down, it doesn't matter how pretty your landing page is - your conversions will suffer.
+

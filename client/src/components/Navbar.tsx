@@ -1,29 +1,31 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/40">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/">
-          <a className="font-serif text-2xl font-bold text-primary tracking-tight">
-            Chestnut
+          <a className="flex items-center gap-2 group">
+             <div className="bg-primary text-primary-foreground p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
+               <Sparkles className="w-5 h-5 fill-current" />
+             </div>
+            <span className="font-sans text-xl font-bold text-foreground tracking-tight">
+              Chestnut
+            </span>
           </a>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">How it Works</a>
-          <a href="#calculator" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Savings</a>
-          <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Features</a>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="font-medium">Sign In</Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-white font-medium px-6 shadow-md hover:shadow-lg transition-all">
-              Get Started
-            </Button>
-          </div>
+        <div className="hidden md:flex items-center gap-10">
+          <a href="#rates" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Compare our Rates</a>
+          <a href="#resources" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Resources</a>
+          <a href="#careers" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Careers</a>
+          <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all">
+            Get your instant quote
+          </Button>
         </div>
 
         {/* Mobile Nav */}
@@ -31,18 +33,15 @@ export default function Navbar() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
+                <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
             <SheetContent>
               <div className="flex flex-col gap-6 mt-8">
-                <a href="#how-it-works" className="text-lg font-medium">How it Works</a>
-                <a href="#calculator" className="text-lg font-medium">Savings</a>
-                <a href="#features" className="text-lg font-medium">Features</a>
-                <div className="flex flex-col gap-3 mt-4">
-                  <Button variant="outline" className="w-full">Sign In</Button>
-                  <Button className="w-full">Get Started</Button>
-                </div>
+                <a href="#rates" className="text-lg font-medium">Compare our Rates</a>
+                <a href="#resources" className="text-lg font-medium">Resources</a>
+                <a href="#careers" className="text-lg font-medium">Careers</a>
+                <Button className="w-full rounded-full">Get your instant quote</Button>
               </div>
             </SheetContent>
           </Sheet>
