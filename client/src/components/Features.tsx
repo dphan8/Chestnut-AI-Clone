@@ -1,70 +1,28 @@
 import { motion } from "framer-motion";
-import { Clock, Home, Star, Trophy, Scissors, Siren } from "lucide-react";
+import { Trophy, Scissors, Siren, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export default function Features() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">
         
-        {/* Stats Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-4xl mx-auto">
-          <motion.div 
-             initial={{ opacity: 0, y: 10 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             className="flex flex-col items-center text-center gap-2"
-          >
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Clock className="w-6 h-6 text-red-500 fill-red-100" />
-              <span>&lt; 2 min.</span>
-            </div>
-            <p className="text-sm text-muted-foreground font-medium">Instant quoting</p>
-          </motion.div>
-
-          <motion.div 
-             initial={{ opacity: 0, y: 10 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ delay: 0.1 }}
-             className="flex flex-col items-center text-center gap-2"
-          >
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Home className="w-6 h-6 text-green-600 fill-green-100" />
-              <span>$85B+</span>
-            </div>
-            <p className="text-sm text-muted-foreground font-medium">Mortgages powered</p>
-          </motion.div>
-
-          <motion.div 
-             initial={{ opacity: 0, y: 10 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ delay: 0.2 }}
-             className="flex flex-col items-center text-center gap-2"
-          >
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Star className="w-6 h-6 text-yellow-400 fill-yellow-100" />
-              <span>5.0</span>
-            </div>
-            <p className="text-sm text-muted-foreground font-medium">Google rating</p>
-          </motion.div>
-        </div>
-
         {/* Headline */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-2xl mx-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold tracking-tight text-foreground"
+            className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6"
           >
-            Lower rates with Chestnut AI™
+            Why overpay when you can automate?
           </motion.h2>
+          <p className="text-lg text-muted-foreground">
+             Most lenders charge you for their inefficiencies. We used technology to remove the bloat, so you keep your money.
+          </p>
         </div>
 
-        {/* Feature Cards */}
+        {/* Feature Cards - Updated with "Painkiller" Copy */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {/* Card 1 */}
           <motion.div 
@@ -74,12 +32,12 @@ export default function Features() {
             transition={{ delay: 0.1 }}
             className="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="w-10 h-10 mb-6 text-yellow-500">
-              <Trophy className="w-full h-full fill-yellow-100" />
+            <div className="w-12 h-12 mb-6 bg-yellow-100 rounded-2xl flex items-center justify-center text-yellow-600">
+              <Trophy className="w-6 h-6 fill-yellow-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Your best deal</h3>
+            <h3 className="text-xl font-bold mb-3">Stop Guessing, Start Saving</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Finds your best deal by comparing offers from 100+ lenders
+              Don't wonder if you got a good deal. Our AI scans 100+ lenders instantly to find the absolute lowest rate for your profile.
             </p>
           </motion.div>
 
@@ -91,12 +49,12 @@ export default function Features() {
             transition={{ delay: 0.2 }}
             className="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="w-10 h-10 mb-6 text-pink-500">
-              <Scissors className="w-full h-full -rotate-45" />
+            <div className="w-12 h-12 mb-6 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600">
+              <Scissors className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Slashed fees</h3>
+            <h3 className="text-xl font-bold mb-3">Keep Your Cash</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Slashes your fees with cost-cutting automation
+              Banks charge junk fees to pay for their branches. We don't have branches. We slash origination fees so you bring less cash to closing.
             </p>
           </motion.div>
 
@@ -108,20 +66,20 @@ export default function Features() {
             transition={{ delay: 0.3 }}
             className="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="w-10 h-10 mb-6 text-red-500">
-              <Siren className="w-full h-full fill-red-100" />
+            <div className="w-12 h-12 mb-6 bg-red-100 rounded-2xl flex items-center justify-center text-red-600">
+              <Siren className="w-6 h-6 fill-red-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Rate monitoring</h3>
+            <h3 className="text-xl font-bold mb-3">Never Miss a Drop</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Helps you lock at the right time with rate monitoring
+              Rates change daily. Our monitoring engine watches the market 24/7 and alerts you exactly when to lock to maximize savings.
             </p>
           </motion.div>
         </div>
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button variant="secondary" size="lg" className="rounded-full px-8 h-14 text-base font-semibold bg-slate-100 hover:bg-slate-200 text-slate-900 group">
-            See how our rates compare
+          <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-base font-semibold border-2 border-slate-200 hover:border-primary hover:text-primary hover:bg-white transition-all group">
+            Compare our live rates vs. Banks
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

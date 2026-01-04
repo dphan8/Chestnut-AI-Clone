@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/abstract_3d_glass_house_financial_security.png";
+import heroImage from "@assets/generated_images/fintech_mortgage_dashboard_ui_mockup.png";
 import { Star } from "lucide-react";
 
 export default function Hero() {
@@ -18,9 +18,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground leading-[1.05]">
-                Low rates, <br />
-                <span className="text-primary">5-star service</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-foreground leading-[1.05]">
+                Secure a Mortgage <br />
+                <span className="text-primary">0.5% Cheaper</span> with AI Automation.
               </h1>
             </motion.div>
             
@@ -30,8 +30,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl md:text-2xl text-muted-foreground max-w-lg font-medium leading-relaxed text-balance"
             >
-              Our team helps find your best option. <br className="hidden md:block"/>
-              <span className="text-foreground font-semibold">AI cuts the rate 0.5%+.</span>
+              Chestnut's AI scans 100+ lenders to cut your rate by 0.5%—saving you thousands automatically.
             </motion.p>
             
             <motion.div 
@@ -44,7 +43,7 @@ export default function Hero() {
                 Get your instant quote
               </Button>
               <p className="text-sm text-muted-foreground pl-6">
-                Takes less than 2 minutes
+                Takes less than 2 minutes • No hard credit check
               </p>
             </motion.div>
             
@@ -61,7 +60,7 @@ export default function Hero() {
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <span className="font-semibold text-foreground ml-1">5.0 rating</span>
+              <span className="font-semibold text-foreground ml-1">5.0 rating based on 2,400+ reviews</span>
             </motion.div>
           </div>
           
@@ -71,35 +70,33 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative lg:h-[600px] flex items-center justify-center"
           >
-            {/* Elevated 3D Visual instead of flat vector */}
-            <div className="relative w-full max-w-[500px] aspect-[4/5] rounded-[2.5rem] bg-white shadow-2xl overflow-hidden border border-slate-100 ring-1 ring-slate-900/5 p-4">
-                <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-secondary/50 to-transparent z-0"></div>
+            {/* SaaS Dashboard Mockup */}
+            <div className="relative w-full max-w-[600px] aspect-[4/3] rounded-2xl bg-white shadow-2xl overflow-hidden border border-slate-100 ring-1 ring-slate-900/5 transition-all hover:scale-[1.02] duration-500">
+                <img 
+                    src={heroImage} 
+                    alt="Chestnut AI Dashboard" 
+                    className="w-full h-full object-cover object-top"
+                />
                 
-                {/* Image Content */}
-                <div className="w-full h-full rounded-[2rem] overflow-hidden relative bg-slate-50">
-                    <img 
-                        src={heroImage} 
-                        alt="AI Mortgage Protection" 
-                        className="w-full h-full object-cover mix-blend-multiply opacity-90 scale-110 hover:scale-100 transition-transform duration-1000 ease-out"
-                    />
-                    
-                    {/* Floating UI Elements matching the "Success" vibe of the original illustration */}
-                    <motion.div 
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.8, type: "spring" }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/30 z-20"
-                    >
-                        <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </motion.div>
-                </div>
+                {/* Floating "Success" notification */}
+                <motion.div 
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 1, duration: 0.5 }}
+                    className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-green-100 max-w-[240px] z-20 flex gap-3 items-center"
+                >
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                        <Star className="w-5 h-5 fill-green-600" />
+                    </div>
+                    <div>
+                        <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Rate Secured</div>
+                        <div className="text-lg font-bold text-green-700">6.125% APR</div>
+                    </div>
+                </motion.div>
             </div>
             
             {/* Decoration Circles */}
-            <div className="absolute top-1/2 right-0 w-4 h-4 bg-yellow-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-            <div className="absolute top-1/3 left-10 w-3 h-3 bg-primary rounded-full animate-bounce [animation-delay:0.5s]"></div>
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl -z-10"></div>
           </motion.div>
         </div>
       </div>
