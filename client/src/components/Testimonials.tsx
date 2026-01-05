@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Star, Quote, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -31,7 +32,7 @@ export default function Testimonials() {
     <section className="py-24 bg-white relative">
       {/* Background Dots Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-6">
@@ -49,26 +50,34 @@ export default function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <Card key={i} className="border-border/60 shadow-lg shadow-slate-200/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white">
-              <CardContent className="pt-8 px-8 pb-8 flex flex-col gap-6 h-full">
-                <Quote className="w-10 h-10 text-primary/10 fill-primary/5" />
-                <p className="text-lg text-foreground/80 leading-relaxed font-medium">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-4 mt-auto border-t border-border/40 pt-6">
-                  <Avatar className="h-12 w-12 border-2 border-white shadow-sm">
-                    <AvatarFallback className="bg-gradient-to-br from-primary to-blue-600 text-white font-bold">{t.initials}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-bold text-sm flex items-center gap-1.5">
-                      {t.name}
-                      {t.verified && <CheckCircle className="w-3.5 h-3.5 text-primary fill-primary/10" />}
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <Card className="border-border/60 shadow-lg shadow-slate-200/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white h-full">
+                <CardContent className="pt-8 px-8 pb-8 flex flex-col gap-6 h-full">
+                  <Quote className="w-10 h-10 text-primary/10 fill-primary/5" />
+                  <p className="text-lg text-foreground/80 leading-relaxed font-medium">
+                    "{t.quote}"
+                  </p>
+                  <div className="flex items-center gap-4 mt-auto border-t border-border/40 pt-6">
+                    <Avatar className="h-12 w-12 border-2 border-white shadow-sm">
+                      <AvatarFallback className="bg-gradient-to-br from-primary to-blue-600 text-white font-bold">{t.initials}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <div className="font-bold text-sm flex items-center gap-1.5">
+                        {t.name}
+                        {t.verified && <CheckCircle className="w-4 h-4 text-primary fill-primary/10" />}
+                      </div>
+                      <div className="text-xs text-muted-foreground">{t.role}</div>
                     </div>
-                    <div className="text-xs text-muted-foreground">{t.role}</div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

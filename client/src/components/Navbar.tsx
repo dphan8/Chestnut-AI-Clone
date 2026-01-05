@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu, Sparkles, ArrowRight } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -10,15 +10,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/40">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/">
-          <a className="flex items-center gap-2 group">
-             <div className="bg-primary text-primary-foreground p-1.5 rounded-lg group-hover:rotate-12 transition-transform shadow-md shadow-primary/20">
-               <Sparkles className="w-5 h-5 fill-current" />
-             </div>
-            <span className="font-sans text-xl font-bold text-foreground tracking-tight">
-              Chestnut
-            </span>
-          </a>
+        <Link href="/" className="flex items-center gap-2 group">
+          <img src="/logo.png" alt="Chestnut Logo" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
@@ -42,14 +35,9 @@ export default function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col h-full">
                 <div className="flex items-center gap-2 mb-8">
-                  <div className="bg-primary text-primary-foreground p-1.5 rounded-lg">
-                    <Sparkles className="w-5 h-5 fill-current" />
-                  </div>
-                  <span className="font-sans text-xl font-bold text-foreground tracking-tight">
-                    Chestnut
-                  </span>
+                  <img src="/logo.png" alt="Chestnut Logo" className="h-10 w-auto" />
                 </div>
-                
+
                 <div className="flex flex-col gap-2">
                   <a href="#rates" onClick={() => setIsOpen(false)} className="text-lg font-medium p-3 hover:bg-muted rounded-lg transition-colors flex justify-between items-center group">
                     Compare our Rates
@@ -64,7 +52,7 @@ export default function Navbar() {
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
                   </a>
                 </div>
-                
+
                 <div className="mt-auto pb-8">
                   <Button className="w-full rounded-full h-12 text-lg shadow-lg" onClick={() => setIsOpen(false)}>
                     Get your instant quote
